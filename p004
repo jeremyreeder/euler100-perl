@@ -1,0 +1,19 @@
+#!/usr/bin/env perl
+use Modern::Perl '2020';
+
+# Problem 4: Find the largest palindrome made from the product of two 3-digit numbers.
+
+sub answer {
+	my $max_c = 0;
+	for my $a (100..999) {
+		for my $b (100..999) {
+			my $c = $a * $b;
+			if ($c > $max_c && (scalar reverse $c) eq $c) {
+				$max_c = $c
+			}
+		}
+	}
+	$max_c;
+}
+
+say answer;
