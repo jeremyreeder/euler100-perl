@@ -8,8 +8,8 @@ use Math::Prime::Util qw(primes);
 sub answer {
 	my ($max_factor) = @_;
 	my @primes = @{primes($max_factor)};
-	my @greatestPowerOfEachPrime = map { $_ ** int(log($max_factor) / log($_)) } @primes;
-	product(@greatestPowerOfEachPrime);
+	my @greatest_power_of_each_prime = map { $_ ** int(log($max_factor) / log($_)) } @primes;
+	product(@greatest_power_of_each_prime);
 }
 
 say answer(20);
