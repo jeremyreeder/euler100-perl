@@ -24,7 +24,7 @@ sub answer {
 		$sum += $n;
 		$n = fibonacci->($i);
 		$i += 3; # Every 3rd element in the sequence is even; all others are odd.
-	} while ($n <= 4000000);
+	} while ($n <= 4_000_000);
 	$sum;
 }
 

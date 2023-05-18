@@ -11,6 +11,6 @@ sub multiples {
 	map { $n * $_ } 1..(($ceiling - 1) / $n);
 }
 
-my $ceiling = 1000;
+my $ceiling = 1_000;
 my $answer = sum(uniq((multiples(3, $ceiling), multiples(5, $ceiling))));
 say $answer;
