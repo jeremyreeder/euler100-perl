@@ -6,9 +6,9 @@ use Modern::Perl '2020';
 sub isDivisibleByOneThruTwenty {
 	my ($n) = @_;
 	for my $d (1..20) {
-		if ($n % $d != 0) { return false }
+		if ($n % $d != 0) { return 0 }
 	}
-	true;
+	1;
 }
 
 sub answer {
